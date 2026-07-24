@@ -881,14 +881,36 @@ section {
     display: none;
 }
 
-.project-img {
-    height: 200px;
-    background: var(--primary-gradient);
+.project-preview {
+    height: 170px;
+    background: #c898d4;
+    /*background: var(--primary-gradient);*/
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3rem;
-    color: rgba(255, 255, 255, 0.5);
+    position: relative;
+    cursor: pointer;
+}
+
+.preview-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.3rem;
+    transition: var(--transition);
+}
+
+.project-preview:hover .preview-icon {
+    background: #fff;
+    color: var(--primary);
+    transform: scale(1.1);
 }
 
 .project-content {
